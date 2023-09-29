@@ -18,9 +18,6 @@ class PingTester:
         with open(self.csv_file_name, mode='a', newline='') as file:
             writer = csv.writer(file)
 
-            if file.tell() == 0:
-                writer.writerow(['Timestamp', 'Response Time (s)'])
-
             while True:
                 timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
