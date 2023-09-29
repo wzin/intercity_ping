@@ -25,14 +25,13 @@ class PingTester:
                 timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
                 try:
-                    print("Ping")
                     start_time = time.time()
                     subprocess.check_output(['ping', '-c', '1', '-W', str(self.timeout), self.address])
                     response_time = time.time() - start_time
-                    print(f"Response time: {response_time}")
                 except subprocess.CalledProcessError:
                     response_time = self.timeout
 
+                print(f"Response time: {response_time}")
                 writer.writerow([timestamp, response_time])
                 file.flush()
                 time.sleep(self.interval)

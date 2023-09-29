@@ -4,7 +4,7 @@ Simple script that will save the 1.1.1.1 ping response times while traveling thr
 ## Installation
 
 ```bash
-pip install matplotlib numpy
+pip3 install matplotlib numpy
 ```
 
 ## Usage
@@ -12,13 +12,13 @@ pip install matplotlib numpy
 Run and record:
 
 ```bash
-python script_name.py --interval 10 --timeout 10 --address 1.1.1.1
+python3 intercity.py --interval 10 --timeout 10 --address 1.1.1.1
 ```
 
 Plot the results:
 
 ```bash
-python script_name.py --plot
+python3 intercity.py --plot
 ```
 
 
